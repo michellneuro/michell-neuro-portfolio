@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --font-syne: "Syne", sans-serif;
+}
+
+html, body, #root {
+  background-color: #F2F3F5;
+  color: #111111;
+}
+
+.has-custom-cursor,
+.has-custom-cursor * {
+  cursor: none !important;
+}
+
+/* Fashion Rima - Flexbox Accordion Gallery */
+.accordion-gallery {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 75vh;
+  min-height: 500px;
+  gap: 12px;
+}
+
+.accordion-item {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background-color: #E5E0D8;
+  cursor: pointer;
+  transition: flex 0.7s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: flex;
+}
+
+.accordion-item:hover {
+  flex: 6;
+}
+
+.accordion-gallery:hover .accordion-item:not(:hover) {
+  opacity: 0.65;
+}
+
+.accordion-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.accordion-item:hover .accordion-image {
+  transform: scale(1.03);
+}
+
+@media (max-width: 640px) {
+  .accordion-gallery {
+    height: 60vh;
+    gap: 6px;
+  }
+}

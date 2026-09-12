@@ -1,0 +1,8 @@
+{
+  "name": "Remix Michell Neuro Portfolio",
+  "description": "Portfolio website for Creative Director / Visual Creator Michell Neuro",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
